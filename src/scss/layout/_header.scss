@@ -1,0 +1,227 @@
+.header {
+  background: $bg-gradient;
+
+  &_container {
+    padding: 0 45px 280px 45px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+    height: 77px;
+    align-items: center;
+  }
+  &_top-left {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    p {
+      margin-left: 25px;
+    }
+  }
+  &_logo {
+    max-width: 106px;
+  }
+
+  .nav {
+    color: gray;
+    &_list {
+      display: flex;
+      font-family: Inter;
+      gap: 40px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      &-item:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_title {
+    flex-basis: 566px;
+    font-family: Inter;
+    font-size: 66px;
+    font-weight: 300;
+    line-height: 79px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 145px;
+  }
+  &_number {
+    display: flex;
+    flex-direction: column;
+    margin-left: 420px;
+    p {
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: gray;
+      margin-top: 2px;
+    }
+    a {
+      font-family: Inter;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 39px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: white;
+      text-decoration: none;
+    }
+    &-btn {
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: gray;
+      border: 1.5px dashed gray;
+      background: transparent;
+      padding: 14px 22px;
+      border-radius: 6px;
+      margin-top: 24px;
+    }
+  }
+  &_free-btn button {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 16px 38px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 64px;
+    margin-left: 145px;
+  }
+  &_img {
+    position: absolute;
+    top: 174px;
+    left: 116px;
+    width: 100%;
+
+    max-width: 1440px;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  .header {
+    &_img {
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 750px;
+    padding: 29px 29px 0 29px;
+    &_container {
+      padding: 0;
+      justify-content: space-between;
+    }
+
+    &_top {
+      flex-basis: auto;
+      height: auto;
+    }
+    &_title {
+      margin: 0;
+      text-align: center;
+      flex-basis: 690px;
+      font-size: 48px;
+      line-height: 58px;
+      margin-top: 77px;
+      order: 3;
+    }
+    &_number {
+      order: 1;
+      margin: 0;
+      flex-direction: row;
+      align-items: center;
+      p,
+      a {
+        display: none;
+      }
+      &-btn {
+        margin-top: 0;
+        padding: 6px 12px;
+      }
+    }
+    &_free-btn {
+      margin-top: 60px;
+      flex-basis: 100%;
+      order: 4;
+      text-align: center;
+      button {
+        margin: 0;
+      }
+    }
+    .nav {
+      display: none;
+    }
+    &_top-left_time {
+      display: none;
+    }
+    &_top-left_key {
+      display: none;
+    }
+    &_img {
+      top: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    padding: 17px 17px 0 17px;
+    height: 490px;
+    &_logo {
+      max-width: 68px;
+    }
+    &_title {
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 31px;
+      max-width: 266px;
+      margin-top: 47px;
+    }
+    &_number {
+      &-btn {
+        display: none;
+      }
+    }
+    &_img {
+      transform: scale(1.5);
+      left: -90px;
+      top: 330px;
+    }
+    &_free-btn {
+      margin-top: 36px;
+      button {
+        padding: 16px 0;
+        width: 100%;
+      }
+    }
+  }
+}
